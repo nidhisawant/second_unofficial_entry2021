@@ -16,7 +16,7 @@ function [score] = model_test_code(model,features,classes)
     if lab_normal==1
         score(1,scored_label_idx(22))=score_normal(1,2)/sum(score_normal);
     else
-       [lab_rythm,score_rythm]=predict(model{1,2},features);
+       [lab_rythm,score_rythm]=predict(model{2},features);
        if lab_rythm==1
            [lab_af,score_af]=predict(model{3},features);
            [lab_flutter,score_flutter]=predict(model{4},features);
